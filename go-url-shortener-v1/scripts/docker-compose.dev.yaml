@@ -1,0 +1,10 @@
+services:
+  go-url-shortener-v1:
+    container_name: go-url-shortener-v1
+    build:
+      context: ..
+      dockerfile: ../build/package/image/dev.Dockerfile
+    volumes:
+      - ../:/app
+    ports:
+      - "2345:2345"
